@@ -2,33 +2,39 @@
 
 ## Problem Statement
 
-For years software engineers have relayed on managers and/or administrators to produce fair production support schedules.  Most schedules produced end up lacking fairness and transparency to the engineers that they serve.  Schedules usually don’t cover the following items:
+For years software engineers have relayed on managers and/or administrators to
+ produce fair production support schedules.  Most schedules produced end up
+  lacking fairness and transparency to the engineer's that they serve. 
+   Schedules usually don’t cover the following items:
 
 * Recognition for Holidays worked
-* Recognition for volunteering to help
+* Recognition for volunteer help
 * Explanation into how schedule was determined
 * Fair distribution between primary and secondary support
 * Ability for engineers to modify scheduled
 
-To remedy the issues documented above I plan to create an application called “SUPPORT:it”  This site will put the power back into the engineers hands and use rules to determine a fair schedule that everyone can agree on.
+To remedy the issues documented above I plan to create an application called
+ “SUPPORT:it”  This site will put the power back into the engineers hands 
+ and will establish rules all team members can live with.
 
 ### Project Technologies/Techniques 
 
 * Security/Authentication
   * Tomcat's JDBC Realm Authentication
-  * Admin role: create/read/update/delete (crud) of all data
-  * User role: create trail, create trail report, edit data they have entered previously
-  * All: anyone can view trail information (no login)
+  * Admin role: create/update resouces, create teams, create/update schedules
+  * User role: update profile info, set schedule user preferences, 
+  view team schedules, request schedule changes
+  * All: view team schedules (user must login)
 * Database
   * MySQL
   * Store users and roles
-  * Store all data for the trails and reports
+  * Store all data for user and schedules
 * ORM Framework
   * Hibernate 5
 * Dependency Management
   * Maven
 * Web Services consumed using Java
-  * NOAA for weather conditions at a trail location, including snow depth
+  * ????? for hoidays within calendar schedule
 * CSS 
   * Bootstrap or Materialize
 * Data Validation
