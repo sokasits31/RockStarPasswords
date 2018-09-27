@@ -58,8 +58,8 @@ To remedy the issues documented above I plan to create an application called
 
 ### Design
 
-* [Screen Design](DesignDocuments/wireframes/screenDesign.md)
-* [Application Flow](DesignDocuments/applicationFlow.md)
+* 
+[Screen Design](/home/student/IdeaProjects/prodSupport/designDocuments/wireframes/screenDesign.md)
 * [Database Design](DesignDocuments/databaseDiagram.png)
 
 ### [Project Plan](ProjectPlan.md)

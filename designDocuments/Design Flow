@@ -1,0 +1,44 @@
+# Design Flow
+
+####Main Home Page
+* Explain Application
+* Allow organization to sign up...  Application send email
+to organization with instructions on how to create an admin 
+user account
+
+####Once admin account is created
+1. admin will need to add resources and assign those
+resources to teams.  NOTE:  Resource can only be assigned to one team  (for now)
+1. admin can create schedule based on desired rules
+1. Application will notify resources that schedule has been
+created.
+
+####Schedule creation with resource preferences
+1.oncall periods will be assigned based on resource 
+preferences.
+1. after preferences have been used. Application will
+base schedule on days worked.  For example, if on call period is on a
+ holiday, resources with least amount of holiday worked will be
+choosen.
+1. The main goal of the application to to ensure that all resources 
+work the same amount of days
+1. To reward resources that volenteer to be on call days will
+be valued more 
+
+
+####Resources (pre schedule activities)
+*. Resources can enter preferences (if allowed by schedule rule)
+
+####Resources (pre/post schedle activities)
+* Resources can request changes. Application will send out
+emails asking Team Resources if they would like to switch.
+
+####Transparency
+* Once schudule is created, resources will be able to see 
+the reason why 
+
+
+
+
+
+Once organization is signed up
