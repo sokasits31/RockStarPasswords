@@ -1,0 +1,54 @@
+# Admin User Screens
+
+![dashboard](Admin%20Screens/dashboard.png)
+
+
+### Create/update resources
+Screen used by admin to create and update Resources
+
+![resourceAddUpdate](Admin Screens/Resource Management/Update.png)
+
+### Remove resources
+Screen used by admin to remove a resource
+
+![resourceAddUpdate](Admin Screens/Resource Management/remove.png)
+
+### Create/update Team
+
+![resourceAddUpdate](Admin Screens/Team Management/update.png)
+
+### Remove Team
+
+![resourceAddUpdate](Admin Screens/Team Management/remove.png)
+
+### Create Schedule
+
+![resourceAddUpdate](Admin Screens/Schedule Management/create.png)
+
+
+
+# Resource User Screens
+
+### Dashboard
+
+![resourceAddUpdate](Resource Screens/dashboard.png)
+
+### Preferences
+![resourceAddUpdate](Resource Screens/preferences.png)
+
+### Request Schedule Change
+![resourceAddUpdate](Resource Screens/requestChange.png)
+
+#All User Screens
+
+### View Current/upcoming Schedule
+![resourceAddUpdate](viewCurrentschedule.png)
+Notes:  Need a drop down for the team and schedule name
+
+### Display Days worked
+![resourceAddUpdate](displayCounts.png)
+Notes:  Need a drop down for the team and schedule name
+
+
+
+
