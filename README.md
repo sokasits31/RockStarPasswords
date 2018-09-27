@@ -59,7 +59,7 @@ To remedy the issues documented above I plan to create an application called
 ### Design
 
 * 
-[Screen Design](/home/student/IdeaProjects/prodSupport/designDocuments/wireframes/screenDesign.md)
+[Screen Design](designDocuments/wireframes/screenDesign.md)
 * [Database Design](DesignDocuments/databaseDiagram.png)
 
 ### [Project Plan](ProjectPlan.md)
