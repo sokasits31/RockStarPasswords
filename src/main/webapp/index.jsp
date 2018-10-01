@@ -13,12 +13,14 @@
                     <%@ include file="/menu.jsp"%>
                 </td>
                 <td align="center" valign="top">
-                    content goes here!!!
+                    <form action="/supportIT/adminUser" method="GET">
+                        <input type="submit" name="submit" VALUE="Display All Resources">
+                    </form>
+                    Cool Picture
                 </td>
             </tr>
 
         </table>
-
         <%@ include file="/footer.jsp"%>
     </div>
 </body>

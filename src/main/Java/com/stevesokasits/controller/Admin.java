@@ -1,5 +1,10 @@
 package com.stevesokasits.controller;
 
+import com.stevesokasits.persistence.UserDao;
+
+import javax.servlet.http.HttpServlet;
+
+
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -8,16 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-import edu.matc.persistence.UserDao;
-import edu.matc.persistence.UserData;
 
-import javax.servlet.RequestDispatcher;
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.annotation.*;
-import java.io.IOException;
 
 /**
  * A simple servlet to welcome the user.
@@ -25,35 +21,23 @@ import java.io.IOException;
  */
 
 @WebServlet(
-        urlPatterns = {"/searchUser"}
+        name = "adminUserServlet",
+        urlPatterns = {"/adminUser"}
 )
 
 public class Admin extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        //UserDao userDao = new UserDao();
 
-        if (req.getParameter("submit").equals("addResource")) {
+        System.out.println("here!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+        UserDao userDao = new UserDao();
 
-        } else {
-            if (req.getParameter("submit").equals("updateResource")) {
-
-            } else {
-                if (req.getParameter("submit").equals("deleteResource")) {
-
-                }
-            } else {
-
-            }
-        }
-
-        if (req.getParameter("submit").equals("Select All")) {
+        if (req.getParameter("submit").equals("Display All Resources")) {
             req.setAttribute("users", userDao.getAllUsers());
-        } else {
-            req.setAttribute("users", userDao.getAllUsers(req.getParameter("searchTerm"), req.getParameter("searchType")));
         }
-        RequestDispatcher dispatcher = req.getRequestDispatcher("/results.jsp");
+        System.out.println("now +++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+        RequestDispatcher dispatcher = req.getRequestDispatcher("/content/admin/displayAllResources.jsp");
         dispatcher.forward(req, resp);
     }
 }
