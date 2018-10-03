@@ -7,20 +7,27 @@
     <div id="container">
         <%@ include file="/header.jsp"%>
 
-        <table>
-            <tr>
-                <td align="left" valign="top">
-                    <%@ include file="/menu.jsp"%>
-                </td>
-                <td align="center" valign="top">
-                    <form action="/supportIT/adminUser" method="GET">
-                        <input type="submit" name="submit" VALUE="Display All Resources">
-                    </form>
-                    Cool Picture
-                </td>
-            </tr>
+        <form action="/supportIT/grantAccess" method="get">
 
-        </table>
+            <table>
+                <tr>
+                    <td>Email Address</td>
+                    <td><input type="text" name="emailAddress"></td>
+                </tr>
+                <tr>
+                    <td>Password</td>
+                    <td><input type="text" name="password"></td>
+                </tr>
+            </table>
+            <br>
+            <input type="submit" name="submit" VALUE="Submit">
+
+
+        </form>
+        </p>
+
+
+
         <%@ include file="/footer.jsp"%>
     </div>
 </body>
