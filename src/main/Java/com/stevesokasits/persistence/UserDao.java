@@ -20,6 +20,7 @@ public class UserDao {
 
     public List<User> getAllUsers() {
 
+
         Session session = sessionFactory.openSession();
         CriteriaBuilder builder = session.getCriteriaBuilder();
         CriteriaQuery<User> query = builder.createQuery(User.class);
@@ -30,6 +31,12 @@ public class UserDao {
         return users;
     }
 
+    public User getById(int id) {
+        Session session = sessionFactory.openSession();
+        User user = session.get( User.class, id );
+        session.close();
+        return user;
+    }
 
 
 }
