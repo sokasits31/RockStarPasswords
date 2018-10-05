@@ -24,14 +24,16 @@ class UserDaoTest {
         com.stevesokasits.test.util.Database database = com.stevesokasits.test.util.Database.getInstance();
         //edu.matc.test.util.Database database = edu.matc.test.util.Database.getInstance();
         database.runSQL("usersTestData.sql");
+        System.out.println("sQl ran.....................................................................................");
         dao = new UserDao();
     }
 
     @Test
     void getAllUsersSuccess() {
 
+        System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
         List<User> users = dao.getAllUsers();
-        assertEquals(4, users.size());
+        assertEquals(5, users.size());
 
     }
 
@@ -56,7 +58,7 @@ class UserDaoTest {
     @Test
     void insertSuccess() {
 
-        User newUser = new User("new@gmail.com","resource" ,"First", "Last",true,false,"college1");
+        User newUser = new User("new@gmail.com","resource" ,"First", "Last",true,false,"college1", null);
         int id = dao.insert(newUser);
         assertNotEquals(0,id);
         User insertedUser = dao.getById(id);

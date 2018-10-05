@@ -30,13 +30,11 @@ public class Admin extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
 
-        System.out.println("here!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
         UserDao userDao = new UserDao();
 
         if (req.getParameter("submit").equals("Display All Resources")) {
             req.setAttribute("users", userDao.getAllUsers());
         }
-        System.out.println("now +++++++++++++++++++++++++++++++++++++++++++++++++++++++");
         RequestDispatcher dispatcher = req.getRequestDispatcher("/content/admin/displayAllResources.jsp");
         dispatcher.forward(req, resp);
     }

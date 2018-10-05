@@ -24,7 +24,7 @@ public class SupportTeam {
     private String support_team_name;
 
 
-    @OneToMany(mappedBy = "suportTeam", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "supportTeam", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     private Set<User> users = new HashSet<>();  // Hibernate needs this created in instances variables.
 
     /**
@@ -40,9 +40,10 @@ public class SupportTeam {
      * @param support_team_name the support team name
      * @param user              the user
      */
-    public SupportTeam (String support_team_name, User user) {
+    public SupportTeam (int id, String support_team_name) {
+        this.id = id;
         this.support_team_name = support_team_name;
-        this.user = user;
+
     }
 
     /**
@@ -81,32 +82,13 @@ public class SupportTeam {
         this.support_team_name = support_team_name;
     }
 
-    /**
-     * Gets user.
-     *
-     * @return the user
-     */
-    public User getUser() {
-        return user;
-    }
-
-    /**
-     * Sets user.
-     *
-     * @param user the user
-     */
-    public void setUser(User user) {
-        this.user = user;
-    }
-
 
 
     @Override
     public String toString() {
         return "SupportTeam{" +
                 "id=" + id +
-                ", support_team_name='" + support_team_name + '\'' +
-                ", user=" + user +
+                ", support_team_name='" + support_team_name +
                 '}';
     }
 }
