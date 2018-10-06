@@ -21,7 +21,7 @@ public class SupportTeam {
     private int id;
 
     @Column(name = "support_team_name")
-    private String support_team_name;
+    private String supportTeamName;
 
 
     @OneToMany(mappedBy = "supportTeam", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
@@ -33,18 +33,15 @@ public class SupportTeam {
     public SupportTeam() {
     }
 
-
-
-
     /**
      * Instantiates a new Support team.
      *
-     * @param support_team_name the support team name
-     * @param user              the user
+     * @param id              the id
+     * @param supportTeamName the support team name
      */
-    public SupportTeam (int id, String support_team_name) {
+    public SupportTeam (int id, String supportTeamName) {
         this.id = id;
-        this.support_team_name = support_team_name;
+        this.supportTeamName = supportTeamName;
 
     }
 
@@ -71,26 +68,43 @@ public class SupportTeam {
      *
      * @return the support team name
      */
-    public String getSupport_team_name() {
-        return support_team_name;
+    public String getSupportTeamName() {
+        return supportTeamName;
     }
 
     /**
      * Sets support team name.
      *
-     * @param support_team_name the support team name
+     * @param supportTeamName the support team name
      */
-    public void setSupport_team_name(String support_team_name) {
-        this.support_team_name = support_team_name;
+    public void setSupportTeamName(String supportTeamName) {
+        this.supportTeamName = supportTeamName;
     }
 
+    /**
+     * Gets users.
+     *
+     * @return the users
+     */
+    public Set<User> getUsers() {
+        return users;
+    }
 
+    /**
+     * Sets users.
+     *
+     * @param users the users
+     */
+    public void setUsers(Set<User> users) {
+        this.users = users;
+    }
 
     @Override
     public String toString() {
         return "SupportTeam{" +
                 "id=" + id +
-                ", support_team_name='" + support_team_name +
+                ", supportTeamName='" + supportTeamName + '\'' +
+                ", users=" + users +
                 '}';
     }
 }
