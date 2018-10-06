@@ -39,6 +39,10 @@ public class User {
 
     private String password;
 
+    @ManyToOne
+    private SupportTeam supportTeam;
+
+
     /**
      * Instantiates a new User.
      */
@@ -56,7 +60,7 @@ public class User {
      * @param secondarySupport the secondary support
      * @param password         the password
      */
-    public User(String emailAddress, String userRole, String firstName, String lastName, boolean primarySupport, boolean secondarySupport, String password) {
+    public User(String emailAddress, String userRole, String firstName, String lastName, boolean primarySupport, boolean secondarySupport, String password, int supportTeamId) {
         this.emailAddress = emailAddress;
         this.userRole = userRole;
         this.firstName = firstName;
@@ -64,6 +68,7 @@ public class User {
         this.primarySupport = primarySupport;
         this.secondarySupport = secondarySupport;
         this.password = password;
+        this.supportTeam = supportTeam;
     }
 
     /**
@@ -210,5 +215,21 @@ public class User {
         this.password = password;
     }
 
+    /**
+     * Gets support team.
+     *
+     * @return the support team
+     */
+    public SupportTeam getSupportTeam() {
+        return supportTeam;
+    }
 
+    /**
+     * Sets support team.
+     *
+     * @param supportTeam the support team
+     */
+    public void setSupportTeam(SupportTeam supportTeam) {
+        this.supportTeam = supportTeam;
+    }
 }

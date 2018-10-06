@@ -1,6 +1,7 @@
 package com.stevesokasits.persistence;
 
 
+import com.stevesokasits.entity.User;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.hibernate.Session;

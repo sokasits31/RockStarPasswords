@@ -1,5 +1,6 @@
 package com.stevesokasits.persistence;
 
+import com.stevesokasits.entity.User;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -62,7 +63,7 @@ class UserDaoTest {
     @Test
     void insertSuccess() {
 
-        User newUser = new User("new@gmail.com","resource" ,"First", "Last",true,false,"college1", null);
+        User newUser = new User("new@gmail.com","resource" ,"First", "Last",true,false,"college1", 1);
         int id = dao.insert(newUser);
         assertNotEquals(0,id);
         User insertedUser = dao.getById(id);
