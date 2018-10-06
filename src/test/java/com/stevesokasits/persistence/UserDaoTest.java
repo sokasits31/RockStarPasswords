@@ -25,16 +25,13 @@ class UserDaoTest {
     void setUp() {
 
         com.stevesokasits.test.util.Database database = com.stevesokasits.test.util.Database.getInstance();
-        //edu.matc.test.util.Database database = edu.matc.test.util.Database.getInstance();
         database.runSQL("usersTestData.sql");
-        System.out.println("sQl ran.....................................................................................");
         dao = new UserDao();
     }
 
     @Test
     void getAllUsersSuccess() {
 
-        System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
         List<User> users = dao.getAllUsers();
         assertEquals(5, users.size());
 
@@ -43,8 +40,6 @@ class UserDaoTest {
     /**
      * Verify successful retrieval of a user
      */
-
-
     @Test
     void getByIdSuccess() {
         User retrievedUser = dao.getById(3);
