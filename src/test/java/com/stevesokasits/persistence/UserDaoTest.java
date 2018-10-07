@@ -83,9 +83,9 @@ class UserDaoTest {
      */
     @Test
     void getByPropertyEqualSuccess() {
-        List<User> users = dao.getByPropertyLike("lastName", "Sok");
+        List<User> users = dao.getByPropertyLike("lastName", "Blow");
         assertEquals(1, users.size());
-        assertEquals(4, users.get(0).getId());
+        assertEquals(5, users.get(0).getId());
     }
 
     /**
@@ -93,7 +93,7 @@ class UserDaoTest {
      */
     @Test
     void getByPropertyLikeSuccess() {
-        List<User> users = dao.getByPropertyLike("lastName", "c");
-        assertEquals(3, users.size());
+        List<User> users = dao.getByPropertyLike("lastName", "sok");
+        assertEquals(4, users.size());
     }
 }
