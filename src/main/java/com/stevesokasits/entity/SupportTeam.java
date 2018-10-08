@@ -23,7 +23,9 @@ public class SupportTeam {
     @Column(name = "support_team_name")
     private String supportTeamName;
 
-
+    // mappedBy refers to instance variable on the User class
+    // cascade(what's happening on database).... Get rid of suport we get rid of all the users
+    // orphanRemval what Hiberate is doing with memory
     @OneToMany(mappedBy = "supportTeam", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     private Set<User> users = new HashSet<>();  // Hibernate needs this created in instances variables.
 
@@ -36,11 +38,9 @@ public class SupportTeam {
     /**
      * Instantiates a new Support team.
      *
-     * @param id              the id
      * @param supportTeamName the support team name
      */
-    public SupportTeam (int id, String supportTeamName) {
-        this.id = id;
+    public SupportTeam (String supportTeamName) {
         this.supportTeamName = supportTeamName;
 
     }
@@ -98,6 +98,29 @@ public class SupportTeam {
     public void setUsers(Set<User> users) {
         this.users = users;
     }
+
+
+    /**
+     * Add user.
+     *
+     * @param user the user
+     */
+    public void addUser (User user) {
+        users.add(user);
+        user.setSupportTeam(this);
+    }
+
+    /**
+     * Remove user.
+     *
+     * @param user the user
+     */
+    public void removeUser (User user) {
+        users.remove(user);
+        user.setSupportTeam(null);
+
+    }
+
 
     @Override
     public String toString() {

@@ -60,7 +60,7 @@ public class User {
      * @param secondarySupport the secondary support
      * @param password         the password
      */
-    public User(String emailAddress, String userRole, String firstName, String lastName, boolean primarySupport, boolean secondarySupport, String password, int supportTeamId) {
+    public User(String emailAddress, String userRole, String firstName, String lastName, boolean primarySupport, boolean secondarySupport, String password, SupportTeam supportTeam) {
         this.emailAddress = emailAddress;
         this.userRole = userRole;
         this.firstName = firstName;

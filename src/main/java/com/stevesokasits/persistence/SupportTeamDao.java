@@ -71,7 +71,7 @@ public class SupportTeamDao {
      *
      * @return All users
      */
-    public List<SupportTeam> getAllUsers() {
+    public List<SupportTeam> getAllSupportTeams() {
 
         Session session = sessionFactory.openSession();
 

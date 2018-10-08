@@ -74,16 +74,10 @@ public class UserDao {
     public List<User> getAllUsers() {
 
         Session session = sessionFactory.openSession();
-        System.out.println("111111111111111111");
         CriteriaBuilder builder = session.getCriteriaBuilder();
-        System.out.println("222222222222222222222222222");
         CriteriaQuery<User> query = builder.createQuery( User.class );
 
-        System.out.println("33333333333333333333333333333");
-
-
         Root<User> root = query.from( User.class );
-        System.out.println("444444444444444444444444444444444444444444444");
         List<User> users = session.createQuery( query ).getResultList();
 
         logger.debug("The list of users " + users);
